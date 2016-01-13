@@ -1,0 +1,19 @@
+OBJECT = L8RPS
+  WO_DIRECTORY = "."
+  WORK_ORDER_ID = L1
+  ALGORITHMS = ("inoperable_detector_identification","dropped_frame_characterization","saturated_pixel_characterization","convert_to_float","tirs_3q_response_linearization","tirs_histogram_statistics_characterization","temperature_sensitivity_correction","tirs_bias_removal","tirs_secondary_linearization","tirs_gain_offset_removal","oli_bias_determination","oli_bias_removal","oli_lookup_response_linearization","oli_histogram_statistics_characterization","gain_application","sca_overlap_statistics_characterization","sca_discontinuity_correction","striping_characterization","saturated_pixel_replacement","inoperable_detectors_fill","reflectance_conversion")
+  APPLY_ABSOLUTE_GAIN = 1
+  APPLY_LINEARIZATION_CORRECTION = 1
+  APPLY_RELATIVE_GAIN = 1
+  BACKGROUND_RESPONSE_SELECTION = 3
+  BAND_LIST = (1,2,3,4,5,6,7,8,9,10,11)
+  BIAS_SOURCE = 2
+  DISCONTINUITY_CORRECTION_USE_CPF_FLAG = 1
+  GENERATE_REPORT = 0
+  L1R_FILENAME = "l1r_image.h5"
+  PERFORM_TEMP_SENS = 1
+  PER_FRAME_BIAS_FLAG = 0
+  STORE_CHARACTERIZATION_IN_DB = 0
+  USE_TIRS_CPF_BASELINE_RESPONSE = 1
+END_OBJECT = L8RPS
+END

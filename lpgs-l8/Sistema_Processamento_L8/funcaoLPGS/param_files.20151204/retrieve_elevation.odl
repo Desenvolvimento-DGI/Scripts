@@ -1,0 +1,6 @@
+OBJECT = DRE
+  WO_DIRECTORY = "."
+  WORK_ORDER_ID = L1
+  DEM_FILENAME = "source_dem.h5"
+END_OBJECT = DRE
+END

@@ -1,0 +1,234 @@
+#!/bin/bash -x
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# Descricao: script que recebe o comando que uma nova ordem de servico foi feita #
+# Autor: Jose Neto
+# Data: 04/2015
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+#--------------------------------------------------------------------------------------------------------#
+# Parametros iniciais para executar os processos ADC, LG, SFC e MG #
+#--------------------------------------------------------------------------------------------------------#
+# Nome da ordem a ser executada #
+ordem_executar=$1
+# Carecter chave que permite a identificacao unica no banco de dados #
+caracter_chave=$2
+# Recebe o ano e mes escolhido #
+ano_mes=$3
+# nome da pasta final #
+pasta_final_passagem=`echo $ordem_executar | cut -d "_" -f2`
+# Diretorios #
+# Diretorio de execucao #
+dir_exe="/dados/htdocs/Sistema_Processamento_L8/funcaoIngest"
+# Diretorio das ordens de servico #
+dir_ordem="/dados/htdocs/Sistema_Processamento_L8/ordem_servico"
+# Diretorio L0R_WORK #
+dir_work='/dados/L0R_WORK'
+# Diretorio L0R_TEMP #
+dir_temp='/dados/L0R_TEMP'
+#--------------------------------------------------------------------------------------------------------#
+# fim dos parametros #
+#--------------------------------------------------------------------------------------------------------#
+exit
+#--------------------------------------------------------------------------------------------------------#
+# Antes de iniciar os processos, deve ser criado as pastas na area L0_WORK e L0_TEMP #
+#--------------------------------------------------------------------------------------------------------#
+if [ $ordem_executar ]
+then
+	lista_ordem_criar_pastas=$dir_ordem"/"$ordem_executar
+	if [ -e $caminho_ordem_listar ]
+	then
+		while read lista_criar_pasta
+		do
+			parte_info_ODL=`echo $lista_criar_pasta | cut -d "." -f1`
+			pasta_criar=`echo $parte_info_ODL | cut -d "/" -f5`
+			# Cria a pasta no diretorio L0_WORK #
+			mkdir -p $dir_work'/'$pasta_criar
+			cd $dir_work
+			chmod 777 $pasta_criar
+			cd $dir_exe
+			# Cria a pasta no diretorio L0_TEMP #
+			mkdir -p $dir_temp'/'$pasta_criar
+			cd $dir_temp
+			chmod 777 $pasta_criar
+			cd $dir_exe
+		done < $lista_ordem_criar_pastas
+	else
+		exit
+	fi
+else
+	exit
+fi
+
+#--------------------------------------------------------------------------------------------------------#
+# Fim da criacao das pastas #
+#--------------------------------------------------------------------------------------------------------#
+
+#--------------------------------------------------------------------------------------------------------#
+# Exporta as bibliotecas e funcoes para gerar os produtos #
+#--------------------------------------------------------------------------------------------------------#
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/ias_geo_novas_wrapper.c:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/ias_geo_novas_wrapper.lo:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/ias_geo_novas_wrapper.o
+export PATH=$PATH:'/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/.deps/ias_geo_novas_wrapper.Plo':'/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/.libs/ias_geo_novas_wrapper.o'
+export PATH=$PATH:/home/cdsr/COTS64/novas3.1/data/:/home/cdsr/COTS64/gctp3/
+export PATH=$PATH:/usr/local/Trolltech/Qt-4.8.4/lib/libQtCore.so.4:/home/cdsr/bin/:/home/cdsr/LPGS_2_4_0/include/:/home/cdsr/SBS_3_0_0/OTS
+export PATH=$PATH:/usr/local/Trolltech/Qt-4.8.4/bin/:/usr/local/Trolltech/Qt-4.8.4/lib:
+export PATH=$PATH:/home/cdsr/COTS64/hdfview/bin:/usr/local/bin:/bin:/usr/bin:/home/cdsr/LPGS_2_4_0/build_ias/bin
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/build_ias/tools:/home/oracle/11.2.0/bin
+export PATH=$PATH:/home/cdsr/COTS64/hdf5/include/:/home/cdsr/COTS64/hdf5/bin
+
+export PATH=$PATH:/home/oracle/11.2.0/lib/
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/build_ias/lib/
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/build_ias/iaslib/lib/
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/include/
+export PATH=$PATH:/home/cdsr/bin/
+export PATH=$PATH:/home/cdsr/SBS_3_0_0/OTS
+export PATH=$PATH:/home/cdsr/COTS64/novas3.1/lib/libnovas.a
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/ias_geo_novas_wrapper.c
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/ias_geo_novas_wrapper.lo
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/ias_geo_novas_wrapper.o
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/local_novas_wrapper.h
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/.deps/ias_geo_novas_wrapper.Plo
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/.libs/ias_geo_novas_wrapper.o
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/tests/test_novas_wrapper.c
+export PATH=$PATH:/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/tests/.deps/test_novas_wrapper.Po
+export PATH=$PATH:'/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/.deps/ias_geo_novas_wrapper.Plo'
+export PATH=$PATH:'/home/cdsr/LPGS_2_4_0/ias_lib/misc/geo/.libs/ias_geo_novas_wrapper.o'
+export md5sum=$PATH:/usr/bin/md5sum
+
+export NOVAS_HOME=$PATH:/home/cdsr/COTS64/novas3.1
+export NOVASLIB=$PATH:/home/cdsr/COTS64/novas3.1/lib/
+export NOVASINC=$PATH:/home/cdsr/COTS64/novas3.1/include/
+export QTDIR=$PATH:/usr/local/Trolltech/Qt-4.8.4/
+export QTINC=$PATH:/usr/local/Trolltech/Qt-4.8.4/include/
+export QTLIB=$PATH:/usr/local/Trolltech/Qt-4.8.4/lib/
+export LD_LIBRARY_PATH=$PATH:/usr/local/Trolltech/Qt-4.8.4/lib/
+export JPLDE421=$PATH:/home/cdsr/COTS64/novas3.1/data/lnxp1900p2053.421
+export PATH=$PATH:/home/cdsr/COTS64/novas3.1/include/eph_manager.h
+export PATH=$PATH:/home/cdsr/COTS64/novas3.1/include/novas.h
+export PATH=$PATH:/home/cdsr/COTS64/novas3.1/include/novascon.h
+export PATH=$PATH:/home/cdsr/COTS64/novas3.1/include/nutation.h
+export PATH=$PATH:/home/cdsr/COTS64/novas3.1/include/solarsystem.h
+export IAS=/L0_LANDSAT8/AncillaryFiles/CPF:/home/cdsr/LPGS_2_4_0/ias_lib/io/L0R/ias_l0r.c:/home/cdsr/LPGS_2_4_0/ias_lib/io/L0R/converter/old_L0R/ias_l0r.c
+export HDF=/usr/share/cmake/Modules/FindHDF5.cmake:/usr/share/cmake28/Modules/FindHDF5.cmake
+export PATH=$PATH:/home/cdsr/COTS64/hdf5/include/:/home/cdsr/COTS64/hdf5/bin
+export JPLDE421=/home/cdsr/COTS64/novas3.1/data/lnxp1900p2053.421
+#--------------------------------------------------------------------------------------------------------#
+# Fim dos exports #
+#--------------------------------------------------------------------------------------------------------#
+
+
+#--------------------------------------------------------------------------------------------------------#
+# Inicia os processos #
+#--------------------------------------------------------------------------------------------------------#
+#echo $ordem_executar > $dir_exe"/testeParameto"
+log_file_adc="logsaidaPROCadc"$ordem_executar
+log_file_lg="logsaidaPROClg"$ordem_executar
+log_file_sfc="logsaidaPROCsfc"$ordem_executar
+log_file_mg="logsaidaPROCmg"$ordem_executar
+if [ $ordem_executar ]
+then
+	# lista os valores da ordem de servico do INGEST #
+	caminho_ordem_listar=$dir_ordem"/"$ordem_executar
+	
+	contador=0
+	# Lendo a lista das ordens #
+	while read lista_ordem
+	do
+		if [ $contador == 0 ]
+		then
+			arquivo_ODL_executar=`echo $lista_ordem`
+			#--echo $arquivo_ODL_executar
+			# 1.2.1 - Executa a funcao ADC #
+			/home/cdsr/Ingest_3_6_0/ADC $arquivo_ODL_executar >& 'logs/'$log_file_adc"_"$contador
+			# 1.2.2 - Executa a funcao LG #
+			/home/cdsr/Ingest_3_6_0/LG $arquivo_ODL_executar >& 'logs/'$log_file_lg"_"$contador
+			# 1.2.3 - Executa a funcao SFC #
+			/home/cdsr/Ingest_3_6_0/SFC $arquivo_ODL_executar >& 'logs/'$log_file_sfc"_"$contador
+			#1.2.4 - Executa a funcao MG #
+			/home/cdsr/Ingest_3_6_0/MG $arquivo_ODL_executar >& 'logs/'$log_file_mg"_"$contador
+		fi
+		contador=$(($contador+1))
+		
+	done < $caminho_ordem_listar
+fi
+exit
+#--------------------------------------------------------------------------------------------------------#
+# Fim dos processos #
+#--------------------------------------------------------------------------------------------------------#
+
+#--------------------------------------------------------------------------------------------------------#
+# Copia os dados para o destino correto #
+#--------------------------------------------------------------------------------------------------------#
+# diretorio final do dado #
+dir_out='/L0_LANDSAT8/L0Ra/'$ano_mes
+# diretorio do dado trabalhado #
+dir_work='/dados/L0R_WORK'
+
+# cria a pasta no diretorio final #
+if [ -d $dir_out'/'$pasta_final_passagem ]
+then
+	# apaga a pasta #
+	cd $dir_out
+	rm -rf $pasta_final_passagem
+fi
+# criando a pasta novamente #
+cd $dir_out
+mkdir $pasta_final_passagem
+# Movendo os dados das passagens #
+while read lista_criar_pasta
+do
+		parte_info_ODL=`echo $lista_criar_pasta | cut -d "." -f1`
+		pasta_a_copiar=`echo $parte_info_ODL | cut -d "/" -f5`
+		# Movendo a pasta #
+		#echo $dir_work'/'$pasta_a_mover $dir_out'/'$pasta_final_passagem'/'
+		#cp -Rapf $dir_work'/'$pasta_a_mover $dir_out'/'$pasta_final_passagem'/'
+		cd $dir_out
+		cp -dRfv $dir_work'/'$pasta_a_copiar $dir_out'/'$pasta_final_passagem
+		cd $dir_exe
+		
+		# Depois de copiado e verificado, apaga os dados no L0_WORK //
+		if [ -e $dir_out'/'$pasta_final_passagem'/'$pasta_a_copiar ]
+		then
+			cd $dir_work
+			rm -rf $pasta_a_copiar
+			cd $dir_exe
+		fi
+		#echo "copiou" $dir_work'/'$pasta_a_copiar $dir_out'/'$pasta_final_passagem'/'
+		
+done < $lista_ordem_criar_pastas
+
+#--------------------------------------------------------------------------------------------------------#
+# Fim da copia #
+#--------------------------------------------------------------------------------------------------------#
+
+#--------------------------------------------------------------------------------------------------------#
+# Grava na base de dados as informacoes sobre termino do processo #
+#--------------------------------------------------------------------------------------------------------#
+status='FINALIZADO'
+# Variaveis de Data #
+dia=`date '+%d'`
+mes=`date '+%m'`
+ano=`date '+%Y'`
+# Variaveis de hora #
+hora=`date '+%H'`
+min=`date '+%M'`
+seg=`date '+%S'`
+# data e hora de termino do processo #
+data_final=$dia'/'$mes'/'$ano' '$hora':'$min':'$seg
+
+# Atualiza os dados no banco de dados #
+up_ingest=`mysql -h 150.163.134.104 -P3333 -u dgi -pdgi.2013 -D sistema_L8 -s -e "UPDATE processos_Landsat8 SET proc_data_final = '$data_final', proc_status = '$status' WHERE proc_caracter_chave = '$caracter_chave'"`
+#--------------------------------------------------------------------------------------------------------#
+# Fim da gravacao no banco de dados #
+#--------------------------------------------------------------------------------------------------------#
+
+# Remove a ordem de servico da area de ordens #
+cd $dir_ordem
+rm $ordem_executar
+# Remove os logs #
+cd $dir_exe'/logs'
+#--rm -rf $log_file_mg*
+
+# finalizado #
+
+exit

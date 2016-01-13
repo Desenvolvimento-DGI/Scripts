@@ -1,0 +1,672 @@
+\e[31mSTARTING  setup_work_order\e[0m
+2016-01-06 12:30:20  setup_work_order    12223 setup_work_order.c        92  INFO Initiated
+2016-01-06 12:30:21  setup_work_order    12223 read_l0r_metadata.c       91  INFO Reading L0R metadata from l0r_symlink/LC82200622015353CUB00
+2016-01-06 12:30:23  setup_work_order    12223 setup_work_order.c       539  INFO Successful completion
+\e[31mSTARTING  retrieve_elevation\e[0m
+2016-01-06 12:30:23  retrieve_elevation    12226 get_gls_data.c            82  INFO Mosaicing GLS DEM tiles...
+2016-01-06 12:30:24  retrieve_elevation    12226 load_gls.c                78  WARN Reading cell header file /home/cdsr/LPGS_2_4_0/root_proc_dir/proddata/dem//gls/s02w044.hdr
+2016-01-06 12:30:24  retrieve_elevation    12226 load_gls.c                98  WARN Tile s02w044.hdr not found -- could be a 'water' tile
+2016-01-06 12:30:24  retrieve_elevation    12226 load_gls.c                78  WARN Reading cell header file /home/cdsr/LPGS_2_4_0/root_proc_dir/proddata/dem//gls/s02w043.hdr
+2016-01-06 12:30:24  retrieve_elevation    12226 load_gls.c                98  WARN Tile s02w043.hdr not found -- could be a 'water' tile
+2016-01-06 12:30:26  retrieve_elevation    12226 retrieve_elevation.c     416  INFO DEM data retrieval successfully completed.
+2200620001_01
+2200620002_01
+2200620003_01
+2200620004_01
+2200620005_01
+2200620006_01
+2200620007_01
+2200620008_01
+2200620009_01
+2200620010_01
+2200620011_01
+2200620012_01
+2200620013_01
+2200620014_01
+2200620015_01
+2200620016_01
+2200620017_01
+2200620018_01
+2200620019_01
+2200620020_01
+2200620021_01
+2200620022_01
+2200620023_01
+2200620024_01
+2200620025_01
+2200620026_01
+2200620027_01
+2200620028_01
+2200620029_01
+2200620030_01
+2200620031_01
+2200620032_01
+2200620033_01
+2200620034_01
+2200620035_01
+2200620036_01
+2200620037_01
+2200620038_01
+2200620039_01
+2200620040_01
+2200620041_01
+2200620042_01
+2200620043_01
+2200620044_01
+2200620045_01
+2200620046_01
+2200620047_01
+2200620048_01
+2200620049_01
+2200620050_01
+2200620051_01
+2200620052_01
+2200620053_01
+2200620054_01
+2200620055_01
+2200620056_01
+2200620057_01
+2200620058_01
+2200620059_01
+2200620060_01
+2200620061_01
+2200620062_01
+2200620063_01
+2200620064_01
+2200620065_01
+2200620066_01
+2200620067_01
+2200620068_01
+2200620069_01
+2200620070_01
+2200620071_01
+2200620072_01
+2200620073_01
+2200620074_01
+2200620075_01
+2200620076_01
+2200620077_01
+2200620078_01
+2200620079_01
+2200620080_01
+2200620081_01
+2200620082_01
+2200620083_01
+2200620084_01
+2200620085_01
+2200620086_01
+2200620087_01
+2200620088_01
+2200620089_01
+2200620090_01
+2200620091_01
+2200620092_01
+2200620093_01
+2200620094_01
+2200620095_01
+2200620096_01
+2200620097_01
+2200620098_01
+2200620099_01
+2200620100_01
+2200620101_01
+2200620102_01
+2200620103_01
+2200620104_01
+2200620105_01
+2200620106_01
+2200620107_01
+2200620108_01
+2200620109_01
+2200620110_01
+2200620111_01
+2200620112_01
+2200620113_01
+2200620114_01
+2200620115_01
+2200620116_01
+2200620117_01
+2200620118_01
+2200620119_01
+2200620120_01
+2200620121_01
+2200620122_01
+2200620123_01
+2200620124_01
+2200620125_01
+2200620126_01
+2200620127_01
+2200620128_01
+2200620129_01
+2200620130_01
+2200620131_01
+2200620132_01
+2200620133_01
+2200620134_01
+2200620135_01
+2200620136_01
+2200620137_01
+2200620138_01
+2200620139_01
+2200620140_01
+2200620141_01
+2200620142_01
+2200620143_01
+2200620144_01
+2200620145_01
+2200620146_01
+2200620147_01
+2200620148_01
+2200620149_01
+2200620150_01
+2200620151_01
+2200620152_01
+2200620153_01
+2200620154_01
+2200620155_01
+2200620156_01
+2200620157_01
+2200620158_01
+2200620159_01
+2200620160_01
+2200620161_01
+2200620162_01
+2200620163_01
+2200620164_01
+2200620165_01
+2200620166_01
+2200620167_01
+2200620168_01
+2200620169_01
+2200620170_01
+2200620171_01
+2200620172_01
+2200620173_01
+2200620174_01
+2200620175_01
+2200620176_01
+2200620177_01
+2200620178_01
+2200620179_01
+2200620180_01
+2200620181_01
+2200620182_01
+2200620183_01
+2200620184_01
+2200620185_01
+2200620186_01
+2200620187_01
+2200620188_01
+2200620189_01
+2200620190_01
+2200620191_01
+2200620192_01
+2200620193_01
+2200620194_01
+2200620195_01
+2200620196_01
+2200620197_01
+2200620198_01
+2200620199_01
+2200620200_01
+2200620201_01
+2200620202_01
+2200620203_01
+2200620204_01
+2200620205_01
+2200620206_01
+2200620207_01
+2200620208_01
+2200620209_01
+2200620210_01
+2200620211_01
+2200620212_01
+2200620213_01
+2200620214_01
+2200620215_01
+2200620216_01
+2200620217_01
+2200620218_01
+2200620219_01
+2200620220_01
+2200620221_01
+2200620222_01
+2200620223_01
+2200620224_01
+2200620225_01
+2200620226_01
+2200620227_01
+2200620228_01
+2200620229_01
+2200620230_01
+2200620231_01
+2200620232_01
+2200620233_01
+2200620234_01
+2200620235_01
+2200620236_01
+2200620237_01
+2200620238_01
+2200620239_01
+2200620240_01
+2200620241_01
+2200620242_01
+2200620243_01
+2200620244_01
+2200620245_01
+2200620246_01
+2200620247_01
+2200620248_01
+2200620249_01
+2200620250_01
+2200620251_01
+2200620252_01
+2200620253_01
+2200620254_01
+2200620255_01
+2200620256_01
+2200620257_01
+2200620258_01
+2200620259_01
+2200620260_01
+2200620261_01
+2200620262_01
+2200620263_01
+2200620264_01
+2200620265_01
+2200620266_01
+2200620267_01
+2200620268_01
+2200620269_01
+2200620270_01
+2200620271_01
+2200620272_01
+2200620273_01
+2200620274_01
+2200620275_01
+2200620276_01
+2200620277_01
+2200620278_01
+2200620279_01
+2200620280_01
+2200620281_01
+2200620282_01
+2200620283_01
+2200620284_01
+2200620285_01
+2200620286_01
+2200620287_01
+2200620288_01
+2200620289_01
+2200620290_01
+2200620291_01
+2200620292_01
+2200620293_01
+2200620294_01
+2200620295_01
+2200620296_01
+2200620297_01
+2200620298_01
+2200620299_01
+2200620300_01
+2200620301_01
+2200620302_01
+2200620303_01
+2200620304_01
+2200620305_01
+2200620306_01
+2200620307_01
+2200620308_01
+2200620309_01
+2200620310_01
+2200620311_01
+2200620312_01
+2200620313_01
+2200620314_01
+2200620315_01
+2200620316_01
+2200620317_01
+2200620318_01
+2200620319_01
+2200620320_01
+2200620321_01
+2200620322_01
+2200620323_01
+2200620324_01
+2200620325_01
+2200620326_01
+2200620327_01
+2200620328_01
+2200620329_01
+2200620330_01
+2200620331_01
+2200620332_01
+2200620333_01
+2200620334_01
+2200620335_01
+2200620336_01
+2200620337_01
+2200620338_01
+2200620339_01
+2200620340_01
+2200620341_01
+2200620342_01
+2200620343_01
+2200620344_01
+2200620345_01
+2200620346_01
+2200620347_01
+2200620348_01
+2200620349_01
+2200620350_01
+2200620351_01
+2200620352_01
+2200620353_01
+2200620354_01
+2200620355_01
+2200620356_01
+2200620357_01
+2200620359_01
+2200620360_01
+2200620361_01
+2200620362_01
+2200620363_01
+2200620364_01
+2200620365_01
+2200620366_01
+2200620367_01
+2200620368_01
+2200620369_01
+2200620370_01
+2200620371_01
+2200620372_01
+2200620373_01
+2200620374_01
+2200620375_01
+2200620376_01
+2200620377_01
+2200620378_01
+2200620379_01
+2200620380_01
+2200620381_01
+2200620382_01
+2200620383_01
+2200620384_01
+2200620385_01
+2200620386_01
+2200620387_01
+2200620388_01
+2200620389_01
+2200620391_01
+2200620392_01
+2200620393_01
+2200620394_01
+2200620395_01
+2200620396_01
+2200620397_01
+2200620398_01
+2200620400_01
+2200620401_01
+2200620402_01
+2200620403_01
+2200620404_01
+2200620405_01
+2200620406_01
+2200620407_01
+2200620408_01
+2200620409_01
+2200620410_01
+2200620411_01
+2200620415_01
+2200620417_01
+2200620418_01
+2200620422_01
+2200620425_01
+2200620428_01
+2200620430_01
+2200620433_01
+2200620434_01
+2200620435_01
+2200620437_01
+2200620441_01
+2200620442_01
+2200620448_01
+2200620450_01
+2200620451_01
+2200620452_01
+2200620454_01
+2200620455_01
+2200620456_01
+2200620457_01
+2200620458_01
+2200620459_01
+2200620461_01
+2200620463_01
+2200620466_01
+2200620467_01
+2200620468_01
+2200620470_01
+2200620471_01
+2200620472_01
+2200620474_01
+2200620476_01
+2200620477_01
+2200620478_01
+2200620479_01
+2200620480_01
+2200620481_01
+2200620482_01
+2200620483_01
+2200620485_01
+\e[31mSTARTING  ancillary_data_preprocessor\e[0m
+2016-01-06 12:30:27  ancillary_data_preprocessor    12232 ancillary_data_preprocessor.c     100  INFO Initiated
+2016-01-06 12:30:29  ancillary_data_preprocessor    12232 ias_ancillary_smooth_ephemeris.c     172  INFO L0R ephemeris record count = 537
+2016-01-06 12:30:30  ancillary_data_preprocessor    12232 ias_ancillary_identify_quaternion_outliers.c     268  INFO Number of attitude quaternion points 26850
+2016-01-06 12:30:30  ancillary_data_preprocessor    12232 ias_ancillary_convert_imu_to_acs.c     349  INFO Bounds on IMU time 503802343.894597, 503802880.877670
+2016-01-06 12:30:30  ancillary_data_preprocessor    12232 ias_ancillary_extract_valid_imu_data_window.c      60  INFO Ephemeris times --- start 503802344.900066, end 503802879.900066 -> center 503802612.400066
+2016-01-06 12:30:30  ancillary_data_preprocessor    12232 ancillary_data_preprocessor.c     232  INFO Successful completion
+\e[31mSTARTING  create_los_model\e[0m
+2016-01-06 12:30:31  create_los_model    12233 create_los_model.c        72  INFO Create LOS Model started
+2016-01-06 12:30:33  create_los_model    12233 ias_sensor_set_ssm_from_l0r.c     130  WARN MCE mode 0 in use, not mode 4 as expected
+2016-01-06 12:30:33  create_los_model    12233 ias_sensor_check_ssm_encoder_data.c     197  WARN No valid SSM angles found; using nominal value
+2016-01-06 12:30:33  create_los_model    12233 create_los_model.c       246  INFO Create LOS Model finished
+\e[31mSTARTING  create_l1r\e[0m
+2016-01-06 12:30:35  create_l1r    12234 rps_main.c                71  INFO Initiated create_l1r
+2016-01-06 12:30:39  create_l1r    12234 process_scas.c            46  INFO Processing band 1
+2016-01-06 12:30:57  create_l1r    12234 process_scas.c            46  INFO Processing band 2
+2016-01-06 12:30:59  create_l1r    12234 process_scas.c            46  INFO Processing band 3
+2016-01-06 12:31:02  create_l1r    12234 process_scas.c            46  INFO Processing band 4
+2016-01-06 12:31:04  create_l1r    12234 process_scas.c            46  INFO Processing band 5
+2016-01-06 12:31:06  create_l1r    12234 process_scas.c            46  INFO Processing band 6
+2016-01-06 12:31:08  create_l1r    12234 process_scas.c            46  INFO Processing band 7
+2016-01-06 12:31:10  create_l1r    12234 process_scas.c            46  INFO Processing band 8
+2016-01-06 12:31:23  create_l1r    12234 process_scas.c            46  INFO Processing band 9
+2016-01-06 12:31:32  create_l1r    12234 process_scas.c            46  INFO Processing band 10
+2016-01-06 12:31:33  create_l1r    12234 process_scas.c            46  INFO Processing band 11
+2016-01-06 12:31:33  create_l1r    12234 api/api_striping_characterization.c     329  INFO Overall striping metric not calculated due to report and database storage flags being false
+2016-01-06 12:31:34  create_l1r    12234 rps_main.c               261  INFO Successful completion
+\e[31mSTARTING  create_grid\e[0m
+2016-01-06 12:31:36  create_grid    12265 create_grid.c            167  INFO Initiate Create Grid...
+2016-01-06 12:31:36  create_grid    12265 create_grid.c            277  INFO Elevation range   -57.00   178.00
+2016-01-06 12:31:36  create_grid    12265 build_grid.c             258  INFO Processing band number 6
+2016-01-06 12:31:36  create_grid    12265 build_grid.c              92  INFO Writing grid band number 6
+2016-01-06 12:31:36  create_grid    12265 create_grid.c            862  INFO Writing output grid file headers
+2016-01-06 12:31:36  create_grid    12265 create_grid.c            922  INFO Successful completion
+\e[31mSTARTING  makegeomgrid\e[0m
+2016-01-06 12:31:37  Makegeomgrid    12287 make_geom_grid.c         101  INFO Initiated
+2016-01-06 12:31:37  Makegeomgrid    12287 make_geom_grid.c         190  INFO Using band number 6 from the TARGET_FRAME_FILE
+2016-01-06 12:31:37  Makegeomgrid    12287 make_geom_grid.c         611  INFO Successful Completion
+\e[31mSTARTING  geomresample\e[0m
+2016-01-06 12:31:37  Geomresample    12288 geomresample.c           104  INFO Geometric Resample Initiated
+2016-01-06 12:31:37  Geomresample    12288 geomresample.c           123  INFO Reading Grid
+2016-01-06 12:31:37  Geomresample    12288 geomresample.c           245  INFO Resampling band 1
+2016-01-06 12:31:37  Geomresample    12288 scanman.c                250  INFO resampling lines 3560 through 4360
+2016-01-06 12:31:37  Geomresample    12288 scanman.c                250  INFO resampling lines 2910 through 3710
+2016-01-06 12:31:37  Geomresample    12288 scanman.c                250  INFO resampling lines 2260 through 3060
+2016-01-06 12:31:37  Geomresample    12288 scanman.c                250  INFO resampling lines 1610 through 2410
+2016-01-06 12:31:37  Geomresample    12288 scanman.c                250  INFO resampling lines 960 through 1760
+2016-01-06 12:31:38  Geomresample    12288 scanman.c                250  INFO resampling lines 310 through 1110
+2016-01-06 12:31:38  Geomresample    12288 scanman.c                250  INFO resampling lines 0 through 460
+2016-01-06 12:31:38  Geomresample    12288 geomresample.c           356  INFO Geometric Resample Successful Completion
+\e[31mSTARTING  resample\e[0m
+2016-01-06 12:31:38  Resample    12309 resample.c                97  INFO Initiated
+2016-01-06 12:31:38  Resample    12309 process_band.c            76  INFO Resampling band number 6
+2016-01-06 12:31:41  Resample    12309 resample.c               447  INFO Successful Completion
+\e[31mSTARTING  gcpcorrelate\e[0m
+2016-01-06 12:31:41  gcpcorrelate    12333 GCPcorrelate.c            84  INFO Initiated
+2016-01-06 12:31:41  gcpcorrelate    12333 GCPcorrelate.c            87  INFO Reading gcp_lib/GCPLib
+2016-01-06 12:31:41  gcpcorrelate    12333 GCPcorrelate.c           101  INFO Read 269 GCPs
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            238  INFO Processing 1 SCA(s) in image sys_l1g.h5
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            371  INFO Using image chips from gcp_lib
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 0 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 26 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 52 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 78 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 104 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 130 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 156 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 182 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 208 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 234 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            426  INFO Correlating GCP # 260 to SCA 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            683  INFO Points inside image 269, Number used 269, Last used 0
+2016-01-06 12:31:42  gcpcorrelate    12333 process_gcp.c            748  INFO 56 of 269 points correlated
+2016-01-06 12:31:42  gcpcorrelate    12333 GCPcorrelate.c           136  INFO Successful completion
+\e[31mSTARTING  correct_los_model\e[0m
+2016-01-06 12:31:44  correct_los_model    12340 correct_los_model.c      116  INFO Initiated correct_los_model
+2016-01-06 12:31:44  correct_los_model    12340 correct_los_model.c      298  INFO Finished getting satellite time and position
+2016-01-06 12:31:44  correct_los_model    12340 correct_los_model.c      369  INFO Finished calculating the precision corrections
+2016-01-06 12:31:44  correct_los_model    12340 correct_los_model.c      402  INFO Pre-fit RMS residuals:   X =  30.320 meters  Y =   9.996 meters
+2016-01-06 12:31:44  correct_los_model    12340 correct_los_model.c      405  INFO Post-fit RMS residuals:  X =   6.029 meters  Y =   7.727 meters
+2016-01-06 12:31:44  correct_los_model    12340 correct_los_model.c      409  INFO GCP Outlier Percentage:  60.71 percent
+2016-01-06 12:31:45  correct_los_model    12340 correct_los_model.c      544  INFO Successful completion
+\e[31mSTARTING  create_grid_2\e[0m
+2016-01-06 12:31:45  create_grid    12341 create_grid.c            167  INFO Initiate Create Grid...
+2016-01-06 12:31:45  create_grid    12341 create_grid.c            277  INFO Elevation range   -57.00   178.00
+2016-01-06 12:31:45  create_grid    12341 get_frame_minbox.c       193  INFO 546000.000000 774000.000000 -436800.000000 -203700.000000
+
+2016-01-06 12:31:45  create_grid    12341 build_grid.c             258  INFO Processing band number 1
+2016-01-06 12:31:45  create_grid    12341 build_grid.c             258  INFO Processing band number 2
+2016-01-06 12:31:45  create_grid    12341 build_grid.c             258  INFO Processing band number 3
+2016-01-06 12:31:45  create_grid    12341 build_grid.c              92  INFO Writing grid band number 1
+2016-01-06 12:31:45  create_grid    12341 build_grid.c             258  INFO Processing band number 4
+2016-01-06 12:31:45  create_grid    12341 build_grid.c              92  INFO Writing grid band number 2
+2016-01-06 12:31:45  create_grid    12341 build_grid.c             258  INFO Processing band number 5
+2016-01-06 12:31:46  create_grid    12341 build_grid.c              92  INFO Writing grid band number 3
+2016-01-06 12:31:46  create_grid    12341 build_grid.c             258  INFO Processing band number 6
+2016-01-06 12:31:46  create_grid    12341 build_grid.c              92  INFO Writing grid band number 4
+2016-01-06 12:31:46  create_grid    12341 build_grid.c             258  INFO Processing band number 7
+2016-01-06 12:31:46  create_grid    12341 build_grid.c             258  INFO Processing band number 8
+2016-01-06 12:31:46  create_grid    12341 build_grid.c              92  INFO Writing grid band number 5
+2016-01-06 12:31:46  create_grid    12341 build_grid.c              92  INFO Writing grid band number 6
+2016-01-06 12:31:47  create_grid    12341 build_grid.c             258  INFO Processing band number 9
+2016-01-06 12:31:47  create_grid    12341 build_grid.c              92  INFO Writing grid band number 7
+2016-01-06 12:31:47  create_grid    12341 build_grid.c             258  INFO Processing band number 10
+2016-01-06 12:31:47  create_grid    12341 build_grid.c             258  INFO Processing band number 11
+2016-01-06 12:31:47  create_grid    12341 build_grid.c              92  INFO Writing grid band number 8
+2016-01-06 12:31:47  create_grid    12341 build_grid.c              92  INFO Writing grid band number 9
+2016-01-06 12:31:48  create_grid    12341 build_grid.c              92  INFO Writing grid band number 11
+2016-01-06 12:31:48  create_grid    12341 build_grid.c              92  INFO Writing grid band number 10
+2016-01-06 12:31:48  create_grid    12341 create_grid.c            862  INFO Writing output grid file headers
+2016-01-06 12:31:48  create_grid    12341 create_grid.c            922  INFO Successful completion
+\e[31mSTARTING  makegeomgrid_2\e[0m
+2016-01-06 12:31:48  Makegeomgrid    12362 make_geom_grid.c         101  INFO Initiated
+2016-01-06 12:31:48  Makegeomgrid    12362 make_geom_grid.c         190  INFO Using band number 6 from the TARGET_FRAME_FILE
+2016-01-06 12:31:48  Makegeomgrid    12362 make_geom_grid.c         611  INFO Successful Completion
+\e[31mSTARTING  geomresample_2\e[0m
+2016-01-06 12:31:48  Geomresample    12363 geomresample.c           104  INFO Geometric Resample Initiated
+2016-01-06 12:31:48  Geomresample    12363 geomresample.c           123  INFO Reading Grid
+2016-01-06 12:31:48  Geomresample    12363 geomresample.c           245  INFO Resampling band 1
+2016-01-06 12:31:48  Geomresample    12363 scanman.c                250  INFO resampling lines 3560 through 4360
+2016-01-06 12:31:48  Geomresample    12363 scanman.c                250  INFO resampling lines 2910 through 3710
+2016-01-06 12:31:48  Geomresample    12363 scanman.c                250  INFO resampling lines 2260 through 3060
+2016-01-06 12:31:48  Geomresample    12363 scanman.c                250  INFO resampling lines 1610 through 2410
+2016-01-06 12:31:49  Geomresample    12363 scanman.c                250  INFO resampling lines 960 through 1760
+2016-01-06 12:31:49  Geomresample    12363 scanman.c                250  INFO resampling lines 310 through 1110
+2016-01-06 12:31:49  Geomresample    12363 scanman.c                250  INFO resampling lines 0 through 460
+2016-01-06 12:31:49  Geomresample    12363 geomresample.c           356  INFO Geometric Resample Successful Completion
+\e[31mSTARTING  resample_2\e[0m
+2016-01-06 12:31:49  Resample    12384 resample.c                97  INFO Initiated
+2016-01-06 12:31:49  Resample    12384 process_band.c            76  INFO Resampling band number 1
+2016-01-06 12:31:52  Resample    12384 process_band.c            76  INFO Resampling band number 2
+2016-01-06 12:31:54  Resample    12384 process_band.c            76  INFO Resampling band number 3
+2016-01-06 12:31:57  Resample    12384 process_band.c            76  INFO Resampling band number 4
+2016-01-06 12:31:59  Resample    12384 process_band.c            76  INFO Resampling band number 5
+2016-01-06 12:32:02  Resample    12384 process_band.c            76  INFO Resampling band number 6
+2016-01-06 12:32:05  Resample    12384 process_band.c            76  INFO Resampling band number 7
+2016-01-06 12:32:07  Resample    12384 process_band.c            76  INFO Resampling band number 8
+2016-01-06 12:32:18  Resample    12384 process_band.c            76  INFO Resampling band number 9
+2016-01-06 12:32:20  Resample    12384 process_band.c            76  INFO Resampling band number 10
+2016-01-06 12:32:22  Resample    12384 process_band.c            76  INFO Resampling band number 11
+2016-01-06 12:32:25  Resample    12384 resample.c               447  INFO Successful Completion
+\e[31mSTARTING  terrain_occlusion\e[0m
+2016-01-06 12:32:25  terrain_occlusion    12410 terrain_occlusion.c       85  INFO Initiate ...
+2016-01-06 12:32:25  terrain_occlusion    12410 terrain_occlusion.c      226  INFO Elevation range on unresampled DEM: -57 to 178
+
+2016-01-06 12:32:25  terrain_occlusion    12410 occlusion_threading.c     348  INFO Starting terrain occlusion with 20 threads
+2016-01-06 12:32:25  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 0
+2016-01-06 12:32:25  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 1
+2016-01-06 12:32:25  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 2
+2016-01-06 12:32:25  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 3
+2016-01-06 12:32:25  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 4
+2016-01-06 12:32:25  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 5
+2016-01-06 12:32:25  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 6
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 7
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 8
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 9
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 10
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 11
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 12
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     144  INFO Starting SCA 13
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 0: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 1: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 2: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 3: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 4: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 5: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 6: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 7: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 8: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 9: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 10: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 11: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 12: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     377  INFO Occluded pixels in SCA 13: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 occlusion_threading.c     381  INFO Total occluded pixels: 0
+2016-01-06 12:32:26  terrain_occlusion    12410 write_l1g.c               61  INFO Writing occlusion file occlusion_mask.h5
+2016-01-06 12:32:26  terrain_occlusion    12410 terrain_occlusion.c      287  INFO Successful completion.
+\e[31mSTARTING assess_cloud_cover \e[0m
+2016-01-06 12:32:26  assess_cloud_cover    12431 assess_cloud_cover.c    1323  INFO assess_cloud_cover l1t.h5
+2016-01-06 12:32:26  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line    0/7771 (0%)
+2016-01-06 12:32:27  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line  777/7771 (10%)
+2016-01-06 12:32:28  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line 1554/7771 (20%)
+2016-01-06 12:32:29  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line 2331/7771 (30%)
+2016-01-06 12:32:30  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line 3108/7771 (40%)
+2016-01-06 12:32:31  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line 3885/7771 (50%)
+2016-01-06 12:32:32  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line 4662/7771 (60%)
+2016-01-06 12:32:33  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line 5439/7771 (70%)
+2016-01-06 12:32:34  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line 6216/7771 (80%)
+2016-01-06 12:32:35  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line 6993/7771 (90%)
+2016-01-06 12:32:36  assess_cloud_cover    12431 assess_cloud_cover.c     803  INFO Processing line 7770/7771 (100%)
+2016-01-06 12:32:36  assess_cloud_cover    12431 assess_cloud_cover.c     991  INFO Processing line 7771/7771 (100%)
+2016-01-06 12:32:36  assess_cloud_cover    12431 assess_cloud_cover.c    1249  INFO Cloud Score l1t.h5: 33.57%
+2016-01-06 12:32:36  assess_cloud_cover    12431 assess_cloud_cover.c    1250  INFO Created quality band image: quality_band.h5
+2016-01-06 12:32:36  assess_cloud_cover    12431 assess_cloud_cover.c    1251  INFO assess_cloud_cover took 10 seconds
+\e[31mSTARTING format_and_package \e[0m
+2016-01-06 12:32:36  format_and_package    12433 format_and_package.c     230  INFO DMS Format & Package started
+2016-01-06 12:32:36  format_and_package    12433 convert_band.c            92  INFO Converting band 1
+2016-01-06 12:32:36  format_and_package    12433 convert_band.c            92  INFO Converting band 2
+2016-01-06 12:32:37  format_and_package    12433 convert_band.c            92  INFO Converting band 3
+2016-01-06 12:32:37  format_and_package    12433 convert_band.c            92  INFO Converting band 4
+2016-01-06 12:32:37  format_and_package    12433 convert_band.c            92  INFO Converting band 5
+2016-01-06 12:32:37  format_and_package    12433 convert_band.c            92  INFO Converting band 6
+2016-01-06 12:32:37  format_and_package    12433 convert_band.c            92  INFO Converting band 7
+2016-01-06 12:32:37  format_and_package    12433 convert_band.c            92  INFO Converting band 8
+2016-01-06 12:32:38  format_and_package    12433 convert_band.c            92  INFO Converting band 9
+2016-01-06 12:32:38  format_and_package    12433 convert_band.c            92  INFO Converting band 10
+2016-01-06 12:32:38  format_and_package    12433 convert_band.c            92  INFO Converting band 11
+2016-01-06 12:32:38  format_and_package    12433 convert_band.c            95  INFO Converting quality band
+2016-01-06 12:32:39  format_and_package    12433 write_metadata.c        1442  INFO Creating the L1G metadata file
+2016-01-06 12:32:39  format_and_package    12433 create_packages.c        403  INFO Preparing L1G product package
+2016-01-06 12:33:52  format_and_package    12433 write_metadata.c        2119  INFO Creating the database load file: product_data.txt
+2016-01-06 12:33:52  format_and_package    12433 format_and_package.c     507  INFO Successful completion of DMS Format & Package

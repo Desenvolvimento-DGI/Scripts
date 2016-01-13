@@ -1,0 +1,12 @@
+total 52424
+-rw-r--r-- 1 cdsr cdsr  1218880 Aug 27  2003 TOVSTIPI.dat
+-rw-r--r-- 1 cdsr cdsr 50790912 Aug 27  2003 $WHRPT32.raw
+-rw-r--r-- 1 cdsr cdsr      574 Aug 27  2003 $WHRPT32.rpd
+-rw-r--r-- 1 cdsr cdsr    20514 Aug 27  2003 $WHRPT32.sta
+-rw-r--r-- 1 cdsr cdsr   522294 Aug 27  2003 $WHRPT32.qlk
+-rw-r--r-- 1 cdsr cdsr     1731 Aug 27  2003 $WHRPT32.ecf
+-rw-r--r-- 1 cdsr cdsr      144 Aug 27  2003 $WHRPT32.tle
+-rw-r--r-- 1 cdsr cdsr     7344 Aug 27  2003 $WHRPT32.tbs
+-rw-r--r-- 1 cdsr cdsr       80 Aug 27  2003 $WHRPT32.tbr
+-rw-r--r-- 1 cdsr cdsr   686996 Aug 27  2003 $WHRPT32.nmf
+-rw-r--r-- 1 cdsr cdsr   404080 Aug 27  2003 $WHRPT32.nav

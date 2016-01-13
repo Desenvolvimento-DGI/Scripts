@@ -1,0 +1,72 @@
+OBJECT = JOB_PARAMETERS
+    /* One character collection type */
+    COLLECTION_TYPE = "I"
+    /* String collection type */
+    COLLECTION_TYPE_STRING = "EARTH_IMAGING"
+    /* CPF Location including name */
+    CPF_FILENAME = "{CPF_FILENAME}"
+    /* Version of the file.  Used to distinguish other versions from this file.  0 = Original version (first occurrence) of the file. */
+    FILE_VERSION_NUMBER = 0
+    /* Maximum number of fill frames that ADC can use in the interval during its processing */
+    FRAME_FILL_LIMIT = 9999
+    /* Mission data ID */
+    INPUT_ID = "{INPUT_ID}"
+    /* Location of the mission data files */
+    INPUT_PATH = "{INPUT_PATH}"
+    /* L0Ra interval ID including file_version_number*/
+    L0R_INTERVAL_ID = "{L0R_INTERVAL_ID}"
+    /* Final destination of the L0Ra output data */
+    L0R_OUTPUT_PATH = "{L0R_OUTPUT_PATH}"
+    /* Location for the temporary ancillary file ADC writes, the mjp.log, and usually the jpf.odl */
+    L0R_TEMP_PATH = "{L0R_TEMP_PATH}"
+    /* Location for the in-work L0Ra data, will be copied to the L0R_OUTPUT_PATH once Ingest has finished processing */
+    L0R_WORK_PATH = "{L0R_WORK_PATH}"
+    /* Component log level (0 = Debug, 1 = Info, 2 = Warning, 3 = Error) */
+    LOG_LEVEL = 0
+    SENSOR_ID = "OLI"
+    SPACECRAFT_ID = "LANDSAT_8"
+    STATION_ID = "CUB"
+    VEHICLE_NUMBER = 8
+ /* ADC parameters */
+    /* Tolerances used when validating Ancillary data */
+    ANC_10_HZ_TIME_STEP_TOLERANCE = 0.05
+    ANC_1_2_CENTIHZ_TIME_STEP_TOLERANCE = 122
+    ANC_1_HZ_TIME_STEP_TOLERANCE = 0.5
+    ANC_50_HZ_TIME_STEP_TOLERANCE = 0.01
+    ANC_5_HZ_TIME_STEP_TOLERANCE = 0.1
+    MAX_EARTH_PITCH_DEGREES = 16
+    MAX_EARTH_ROLL_DEGREES = 16
+    MAX_EARTH_YAW_DEGREES = 16
+    MAX_OLI_FRAMES_PER_INTERVAL = 600000
+    MAX_TIRS_FRAMES_PER_INTERVAL = 250000
+    OLI_TIME_STEP_TOLERANCE = 0.000014
+    TIRS_TIME_STEP_TOLERANCE = 0.007
+    VERIFY_COLLECTION = "N"
+ /* LG parameters */
+    /* Indicates the size of the buffer in LG */
+    BUFFERED_LINES_COUNT = 2500
+    /* Flag for performing HDF5 compression on the L0Ra files */
+    COMPRESSION = 1
+    /* Value used when filling missing lines */
+    MISSING_LINE_FILL_VALUE = 0
+    /* (0 - 12): Indicates the number of forked processes in LG. 0 indicates no additional processes.  LG will only allow up to 12 - total number of LG bands */
+    PROCESS_COUNT = 4
+    /* (0 - 1): Indicates if a failed crc line is replaced with a missing fill line. Changed from 1 to 0 in Ingest 3.6 */
+    REPLACE_FAILED_CRC = 0
+    /* Offset value above which TIRS redundant pixel replacement will be performed */
+    RPR_OFFSET_TOLERANCE = 1.0
+ /* SFC parameters */
+    ELEVATION_FILENAME = "/home/cdsr/Ingest_3_6_0/WRS2_Average_Elevations.odl"
+    /* Minimum amount of ancillary records required for processing */
+    MIN_ANCILLARY_RECORDS = 6
+    NUM_POLAR_REGION_ROWS = 6
+    SPECIAL_POLAR_TARGET_ROW_LAT = 82.61
+ /* MG parameters */
+    /* Parameters used when creating quality scores */
+    CRC_FAILURE_BREAK_POINT = 100
+    DROPPED_FRAME_BREAK_POINT_OLI = 2
+    DROPPED_FRAME_BREAK_POINT_TIRS = 2
+    INITIAL_QUALITY_SCORE = 9
+    QUALITY_ALGORITHM_NAME = "2011012:LDCM_IMAGE_QUALITY:01.00.00"
+END_OBJECT = JOB_PARAMETERS
+END

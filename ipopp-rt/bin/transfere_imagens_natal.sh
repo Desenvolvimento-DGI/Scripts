@@ -1,0 +1,88 @@
+#!/bin/bash
+
+echo ""
+echo "INICIO  ::  $(date -R)"
+
+
+CMDFTP="/usr/bin/ncftpput -v "
+SERVIDORFTP="ftp.dgi.inpe.br"
+USUARIO="cra"
+SENHA="68LePhMj"
+
+# AQUA
+AQUAFSORIGEM="/L2_AQUA1/"
+AQUADESTINO="/AQUA"
+AQUAFILTRO="*TrueColor.*.tif.zip"
+ARQUIVOSAQUA=""
+
+# TERRA
+TERRAFSORIGEM="/L2_TERRA1/"
+TERRADESTINO="/TERRA"
+TERRAFILTRO="*TrueColor.*.tif.zip"
+ARQUIVOSTERRA=""
+
+# S-NPP
+SNPPFSORIGEM="/L2_NPP/"
+SNPPDESTINO="/S-NPP"
+SNPPFILTRO="*NPP_TCOLOR_SDR.*.tif.zip"
+ARQUIVOSSNPP=""
+
+
+
+ANO=$(date +"%Y")
+MES=$(date +"%m")
+DIA=$(date +"%d")
+
+PERIODO="${ANO}_${MES}/"
+
+AQUADIRORIGEM="${AQUAFSORIGEM}${PERIODO}AQUA_MODIS.${ANO}_${MES}_${DIA}*"
+TERRADIRORIGEM="${TERRAFSORIGEM}${PERIODO}TERRA_MODIS.${ANO}_${MES}_${DIA}*"
+SNPPDIRORIGEM="${SNPPFSORIGEM}${PERIODO}NPP_VIIRS.${ANO}_${MES}_${DIA}*"
+
+
+
+
+# AQUA
+# ====
+
+echo ""
+echo "Verificando imagens AQUA"
+ARQUIVOSAQUA=$(find ${AQUADIRORIGEM} -name "${AQUAFILTRO}" -print)
+
+for ARQAQUAATUAl in ${ARQUIVOSAQUA}
+do
+	echo "${CMDFTP} -u ${USUARIO} -p SENHA  ${SERVIDORFTP} ${AQUADESTINO} ${ARQAQUAATUAl}"
+	${CMDFTP} -u ${USUARIO} -p ${SENHA}  ${SERVIDORFTP} ${AQUADESTINO} ${ARQAQUAATUAl}
+done
+
+
+# TERRA
+# =====
+
+echo ""
+echo "Verificando imagens TERRA"
+ARQUIVOSTERRA=$(find ${TERRADIRORIGEM} -name "${TERRAFILTRO}" -print)
+
+for ARQTERRAATUAl in ${ARQUIVOSTERRA}
+do
+	echo "${CMDFTP} -u ${USUARIO} -p SENHA  ${SERVIDORFTP} ${TERRADESTINO} ${ARQTERRAATUAl}"
+	${CMDFTP} -u ${USUARIO} -p ${SENHA}  ${SERVIDORFTP} ${TERRADESTINO} ${ARQTERRAATUAl}
+done
+
+
+# S-NPP
+# =====
+
+echo ""
+echo "Verificando imagens S-NPP"
+ARQUIVOSSNPP=$(find ${SNPPDIRORIGEM} -name "${SNPPFILTRO}" -print)
+
+for ARQSNPPATUAl in ${ARQUIVOSSNPP}
+do
+	echo "${CMDFTP} -u ${USUARIO} -p SENHA  ${SERVIDORFTP} ${SNPPDESTINO} ${ARQSNPPATUAl}"
+	${CMDFTP} -u ${USUARIO} -p ${SENHA}  ${SERVIDORFTP} ${SNPPDESTINO} ${ARQSNPPATUAl}
+done
+echo ""
+echo "TERMINO ::  $(date -R)"
+echo ""
+
