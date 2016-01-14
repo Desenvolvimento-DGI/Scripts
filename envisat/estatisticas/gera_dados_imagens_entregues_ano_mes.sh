@@ -37,26 +37,26 @@ esac
 
 DIRATUAL="`pwd`"
 AREASCRIPTS="/home/cdsr/estatisticas/"
-DIRGRUPO="entregues_ano_mes/"
 NUMPID=$$
 ARQUIVOSAIDA="${AREASCRIPTS}csv/imagens_entregues_ano_mes_${NUMPID}.csv"
+ARQUIVOTEMP="${AREASCRIPTS}csv/imagens_entregues_ano_mes_${NUMPID}.tmp"
 
-touch ${ARQUIVOSAIDA}
-echo "ANO;MES;FONTE DOS DADOS;SATELITE;TOTAL CENAS UNICAS;FATOR DISTRIBUICAO;TOTAL GERAL" > ${ARQUIVOSAIDA}
+touch ${ARQUIVOTEMP}
+echo "ANO;MES;FONTE DOS DADOS;SATELITE;TOTAL CENAS UNICAS;FATOR DISTRIBUICAO;TOTAL GERAL" > ${ARQUIVOTEMP}
 
 
 if [ "${PARANOINICIAL}" == "*" ]
 then
 
-	${CMDPHP} ${AREASCRIPTS}${DIRGRUPO}catalogo_entregues_por_ano_mes.php ${PARANOINICIAL} ${ARQUIVOSAIDA}
-	${AREASCRIPTS}${DIRGRUPO}l0_entregues_por_ano_mes.sh ${PARANOINICIAL} ${ARQUIVOSAIDA}
+	${CMDPHP} ${AREASCRIPTS}catalogo_entregues_por_ano_mes.php ${PARANOINICIAL} ${ARQUIVOTEMP}
+	${AREASCRIPTS}l0_entregues_por_ano_mes.sh ${PARANOINICIAL} ${ARQUIVOTEMP}
 
 else
 
 	for PARANO in `seq ${PARANOINICIAL} ${PARANOFINAL}`
 	do
-		${CMDPHP} ${AREASCRIPTS}${DIRGRUPO}catalogo_entregues_por_ano_mes.php ${PARANO} ${ARQUIVOSAIDA}
-		${AREASCRIPTS}${DIRGRUPO}l0_entregues_por_ano_mes.sh ${PARANO} ${ARQUIVOSAIDA}
+		${CMDPHP} ${AREASCRIPTS}catalogo_entregues_por_ano_mes.php ${PARANO} ${ARQUIVOTEMP}
+		${AREASCRIPTS}l0_entregues_por_ano_mes.sh ${PARANO} ${ARQUIVOTEMP}
 
 	done
 	
@@ -68,5 +68,9 @@ fi
 echo ""
 echo ""
 
+cat ${ARQUIVOTEMP} | grep -v ';0;'  > ${ARQUIVOSAIDA}
 cat ${ARQUIVOSAIDA}
+
 echo ""
+echo ""
+

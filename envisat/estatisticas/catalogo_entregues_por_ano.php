@@ -40,7 +40,7 @@ $stringSQLPesquisa=
 		WHEN (s.Satellite) = 'RE3' 		THEN 'RAPIDEYE-3   '
 		WHEN (s.Satellite) = 'RE4' 		THEN 'RAPIDEYE-4   '
 		WHEN (s.Satellite) = 'RE5' 		THEN 'RAPIDEYE-5   '
-		WHEN (s.Satellite) = 'CB4'              THEN 'CBERS-4      '
+		WHEN (Satellite) = 'CB4'                THEN 'CBERS-4      '
 		ELSE 'INDEFINIDO   '
 		
 	END 

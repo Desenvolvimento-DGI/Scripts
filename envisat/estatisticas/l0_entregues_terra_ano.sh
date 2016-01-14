@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ 
 # Parametro referente ao ano
 PARANO="${1}"
 ARQUIVOSAIDA="${2}"
@@ -18,37 +18,24 @@ else
 	CAMPOANO="${PARANO}"
 fi
 	
- 	
+	
 
 	
 DIRATUAL="`pwd`"
 
 # Dados referente ao satéte
-SATELITE="NPP"
-NOMESATELITE="S-NPP"
+SATELITE="T1"
+NOMESATELITE="TERRA"
 
-FILTROSATELITE='NPP*'
+FILTROSATELITE='TERRA*'
 FILTROEXTENSAO=""
-ORIGEM="/Level-0/NPP"
-FONTEDADOS='L0 - ACESSO DIRETO'
- 
-
-# Por padrao foi adotado o fator como 2
-# Caso o ano informado seja maior ou igual 2009 o fator sera 2
-# Assim, a cada novo ano nao sera necessario modificar o codigo
+ORIGEM="/Level-0/TERRA/"
 FATORDISTRIBUICAO=2
-
-# Caso o ano informado seja menor ou igual 2008 o fator sera 1
-if [ ${PARANO} -le 2008 ]
-then
-	FATORDISTRIBUICAO=1
-fi
-
-
+FONTEDADOS='L0 - ACESSO DIRETO'
 
 cd ${ORIGEM}
 
-TOTALCENAS="`find ${ORIGEM}/${FILTROPERIODO}  -name "${FILTROSATELITE}"  -print | wc -l`"
+TOTALCENAS="`find ${ORIGEM}/${FILTROPERIODO}  -name ${FILTROSATELITE}  -print | wc -l`"
 TOTALGERAL=$(( ${TOTALCENAS} * ${FATORDISTRIBUICAO} ))
 echo "${NOMESATELITE} : ${TOTALCENAS}  -  ${FATORDISTRIBUICAO}  -  ${TOTALGERAL}"
 echo ""

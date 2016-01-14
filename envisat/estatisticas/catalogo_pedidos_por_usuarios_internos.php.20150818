@@ -15,18 +15,18 @@ else
 {
 	if ( empty($parAnoFinal) )
 	{
-		$stringSQLParAnoInterno=" WHERE u.userId = r.UserId AND categoria = 'I'  AND YEAR(r.ReqDate) = " . $parAnoInicial;
+		$stringSQLParAnoInterno=" WHERE u.userId = r.UserId AND categoria = 'I'  AND YEAR(registerDate) = " . $parAnoInicial;
 		$mensagemAno=$parAnoInicial;
 	}
 	else
 	{
 		$mensagemAno="Ano de " . $parAnoInicial . " ate " . $parAnoFinal;	
-		$stringSQLParAnoInterno=" WHERE u.userId = r.UserId AND categoria = 'I' AND YEAR(r.ReqDate) >= " . $parAnoInicial . "  AND YEAR(r.ReqDate) <= " . $parAnoFinal;		
+		$stringSQLParAnoInterno=" WHERE u.userId = r.UserId AND categoria = 'I' AND YEAR(registerDate) >= " . $parAnoInicial . "  AND YEAR(registerDate) <= " . $parAnoFinal;		
 	}
 	
 }
 // String contendo a instrucao de pesquisa e agrupamento para usuá internos
-$stringSQLPesquisaInterno =	"SELECT YEAR(r.ReqDate) as ANO, u.coordenacao as COORDENACAO, u.divisao as DIVISAO, COUNT(r.ReqId) as PEDIDOS  FROM cadastro.User u, catalogo.Request r " . 	$stringSQLParAnoInterno . " GROUP BY ANO, COORDENACAO, DIVISAO ORDER BY Ano, Pedidos DESC" ;
+$stringSQLPesquisaInterno =	"SELECT YEAR(u.registerDate) as ANO, u.coordenacao as COORDENACAO, u.divisao as DIVISAO, COUNT(r.ReqId) as PEDIDOS  FROM cadastro.User u, catalogo.Request r " . 	$stringSQLParAnoInterno . " GROUP BY ANO, COORDENACAO, DIVISAO ORDER BY Ano, Pedidos DESC" ;
 	
 	
 	

@@ -37,12 +37,12 @@ then
 fi
 
 
-# Dados referente ao satéte
+# Dados referente ao saté
 SATELITE="GOES12"
 NOMESATELITE="GOES-12"
 
 FILTROEXTENSAO=""
-ORIGEM="/L0_GOES12"
+ORIGEM="/Level-0/GOES12"
 
 cd ${ORIGEM}
 
@@ -85,8 +85,8 @@ case ${PARANO} in
 		TOTALCENAS3="`find ${ORIGEM}/2011_11/GVAR/LINUX  -name "${FILTROSATELITE}"  -print | wc -l`"
 				
 		# O mes 12 possui a area GVAR com os subdiretorios LINUX e UNIX
-		# Os arquivos no subdiretorio LINUX estão normais, mas o arquivos no subdiretorio UNIX estão zerados
-		# Possui o diretorio TDF, mas os arquivos estão com tamanho zerado
+		# Os arquivos no subdiretorio LINUX estãnormais, mas o arquivos no subdiretorio UNIX estãzerados
+		# Possui o diretorio TDF, mas os arquivos estãcom tamanho zerado
 		FILTROSATELITE="S*"
 		TOTALCENAS4="`find ${ORIGEM}/2011_12/GVAR/LINUX  -name "${FILTROSATELITE}"  -print | wc -l`"				
 
@@ -176,7 +176,7 @@ case ${PARANO} in
 
 		# Mes 12
 		# Devera ser contabilizado apenas o subdiretorios WINDOWS da area GVAR devido as dados nos subdiretorios LINUX e 
-		# UNIX já existirem no WINDOWS
+		# UNIX jáxistirem no WINDOWS
 		#
 		FILTROSATELITE="S*"
 		TOTALCENAS12="`find ${ORIGEM}/2012_12/GVAR/WINDOWS  -name "${FILTROSATELITE}"  -print | wc -l`"
@@ -193,7 +193,7 @@ case ${PARANO} in
 
 	2013)
 		# Todos os meses de 2013 possuem dados apenas no subdiretorio WINDOWS da area GVAR
-		# A area TDF não possui arquivos
+		# A area TDF nãpossui arquivos
 		#
 		FILTROSATELITE="S*"
 		TOTALCENAS="`find ${ORIGEM}/2013_*/GVAR/WINDOWS  -name "${FILTROSATELITE}"  -print | wc -l`"
@@ -202,7 +202,7 @@ case ${PARANO} in
 		
 
 	*)
-		# Para os anos restantes, que não existem, apresenta os valores zerados
+		# Para os anos restantes, que nãexistem, apresenta os valores zerados
 		TOTALCENAS=0
 		TOTALGERAL=0
 esac		
@@ -212,4 +212,5 @@ echo "${CAMPOANO};${FONTEDADOS};${NOMESATELITE};${TOTALCENAS};${FATORDISTRIBUICA
 	
 
 cd ${DIRATUAL}
+
 
